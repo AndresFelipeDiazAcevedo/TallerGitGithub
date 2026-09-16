@@ -22,6 +22,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -111,7 +112,8 @@ fun TarjetaPresentacion() {
                 )
 
                 Text(
-                    text = "adiaz277@unab.edu.co"
+                    text = "adiaz277@unab.edu.co",
+                    color = Color.Blue
                 )
 
                 Spacer(modifier = Modifier.height(12.dp))
@@ -126,11 +128,23 @@ fun TarjetaPresentacion() {
                 Text(
                     text = "Bucaramanga, Colombia"
                 )
+                Spacer(modifier = Modifier.height(8.dp))
+                HorizontalDivider()
             }
-
+            Spacer(modifier = Modifier.height(4.dp))
             Text(
-                text = ""
+                text = "Mis intereses",
+                fontWeight = FontWeight.Bold,
+                fontSize = 14.sp,
+                color = Color.Gray
             )
+            Spacer(modifier = Modifier.height(4.dp))
+            Text(
+                text = "Me gusta el fútbol, la música, la tecnologia, de mi carrera me interesa" +
+                        " mucho lo que es el desarrollo de software y la ciberseguridad y quiero " +
+                        "en un futuro ser un gran ingeniero"
+            )
+
 
             Spacer(modifier = Modifier.weight(1f))
 
