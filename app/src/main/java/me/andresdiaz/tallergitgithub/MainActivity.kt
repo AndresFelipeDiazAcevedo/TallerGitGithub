@@ -20,6 +20,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -51,50 +52,98 @@ fun TarjetaPresentacion() {
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(all = 16.dp)
+            .padding(16.dp)
     ) {
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(all = 16.dp),
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.SpaceEvenly
+                .padding(16.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
 
             Image(
                 painter = painterResource(R.drawable.fotoperfil),
                 contentDescription = null,
                 modifier = Modifier
-                    .size(120.dp)
+                    .size(100.dp)
                     .clip(CircleShape)
             )
 
+            Spacer(modifier = Modifier.height(12.dp))
+
             Text(
-                text = "",
+                text = "Andrés Felipe Diaz",
                 fontWeight = FontWeight.Bold,
-                fontSize = 24.sp
+                fontSize = 20.sp
             )
+
+            Text(
+                text = "Estudiante Ing.Sistemas",
+                color = Color.Blue
+
+            )
+
+            Spacer(modifier = Modifier.height(12.dp))
+
+
+            Column(
+                modifier = Modifier.fillMaxWidth()
+            ) {
+
+                Text(
+                    text = "EDAD",
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 12.sp,
+                    color = Color.Gray
+                )
+
+                Text(
+                    text = "18 años"
+                )
+
+                Spacer(modifier = Modifier.height(12.dp))
+
+                Text(
+                    text = "CORREO",
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 12.sp,
+                    color = Color.Gray
+                )
+
+                Text(
+                    text = "adiaz277@unab.edu.co"
+                )
+
+                Spacer(modifier = Modifier.height(12.dp))
+
+                Text(
+                    text = "CIUDAD",
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 12.sp,
+                    color = Color.Gray
+                )
+
+                Text(
+                    text = "Bucaramanga, Colombia"
+                )
+            }
 
             Text(
                 text = ""
             )
 
-            Text(
-                text = ""
-            )
-
-            Text(
-                text = "",
-                modifier = Modifier.padding(top = 16.dp)
-            )
+            Spacer(modifier = Modifier.weight(1f))
 
             Button(
                 modifier = Modifier
                     .fillMaxWidth(),
                 onClick = { },
-
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color(0xFF1976D2),
+                    contentColor = Color.White
+                )
             ) {
-                Text("")
+                Text("Contacta conmigo")
             }
         }
     }
